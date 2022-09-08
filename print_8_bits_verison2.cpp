@@ -84,7 +84,7 @@ void convert_bin_hex(string binary, int hex[])
     //Loop through the 8 bits
     for(int i = 7; i >= 0; i--)
     {
-        //Loop through the left nibble 0-3
+        //Loop through the right nibble 0-3
         if(i > 3)
         {
             //If there is a 1 present
@@ -93,7 +93,7 @@ void convert_bin_hex(string binary, int hex[])
                 decimal2 = decimal2 + pow(2, 7-i);
             }
         }
-        //Loop through the right nibble 4-7
+        //Loop through the left nibble 4-7
         else
         {
             //If there is a 1 present
@@ -127,7 +127,6 @@ Output: Prints the binary number
 *************************************************************************************/
 void print_hex(int hex[])
 {
-//Professor this entire function didn't seem like it needed to be here. However, i did it because it was required in the instructions. 
    for(int i = 0; i < 2; i++){
         if(hex[i] == 15){
             cout<<("F");
